@@ -78,7 +78,7 @@ jobs:
           if grep -qP '^scripts/(Dockerfile|setup-android-sdk\.sh|setup-ubuntu\.sh)$' <<< "$CHANGED_FILES"; then
             echo "Detected changes for environment setup scripts. Building custom Docker image now."
             cd ./scripts
-            docker build -t ghcr.io/termux/package-builder:latest .
+            docker build -t ghcr.io/termux/package-builder:sha256:770243427bca3a361ba0de85aceaefbea2a3c1e1575a988584aa31fc7b0f0da3 .
             cd ..
           fi
 
